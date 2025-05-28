@@ -3,8 +3,8 @@ name: Get Citation Data (Windows)
 on: 
   page_build: 
   schedule:
-    - cron: '0 8 * * *'  # 每天 UTC 08:00 运行一次
-  workflow_dispatch: #
+    - cron: '0 8 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -29,11 +29,12 @@ jobs:
         python main.py
         cd results
         git init
-        git config --local user.name "%GITHUB_ACTOR%"
-        git config --local user.email "%GITHUB_ACTOR%@users.noreply.github.com"
-        set remote_repo=https://%GITHUB_ACTOR%:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        git config --local user.name "${{ github.actor }}"
+        git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         git add *.json
         git commit -m "Updated Citation Data"
-        git push %remote_repo% HEAD:google-scholar-stats --force
+        git push origin HEAD:google-scholar-stats --force
       env:
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+
