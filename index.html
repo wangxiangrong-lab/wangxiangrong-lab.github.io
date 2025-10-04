@@ -6,270 +6,260 @@
     <title>王向荣 教授 - 个人主页</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* --- 全局和背景设置 --- */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
-            height: 100%;
-            color: #fff;
-        }
-
+        /* --- 全局样式 --- */
         body {
-            /* 请将背景图片地址替换为您自己的图片URL */
-            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            overflow-y: scroll;
-        }
-
-        /* --- 顶部导航菜单 --- */
-        .top-nav {
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .top-nav ul {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
             margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
+            color: #333;
+            background-color: #f8f9fa;
         }
-
-        .top-nav ul li a {
-            display: block;
-            padding: 15px 20px;
-            color: #f0f0f0;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        a {
+            color: #0056b3;
             text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s, color 0.3s;
-            position: relative;
         }
-
-        .top-nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
+        a:hover {
+            text-decoration: underline;
         }
-        
-        /* 当前活动标签的下划线样式 */
-        .top-nav ul li a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 8px;
-            left: 20px;
-            right: 20px;
-            height: 2px;
-            background-color: #c00;
+        h1, h2, h3 {
+            color: #003366;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
         }
-
-        /* --- 主内容容器 --- */
-        .main-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 100px 20px 40px; /* 顶部留出导航栏空间 */
-            box-sizing: border-box;
-        }
-
-        /* --- 个人信息卡片 --- */
-        .profile-card {
-            display: flex;
-            flex-wrap: wrap; /* 允许换行以实现响应式 */
-            background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            max-width: 900px;
-            width: 100%;
-        }
-
-        /* --- 卡片左侧：头像部分 --- */
-        .profile-left {
-            flex: 0 0 280px; /* 固定宽度 */
-            padding: 30px;
-            text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .profile-left .avatar {
-            width: 180px;
-            height: 180px;
-            border-radius: 10px;
-            border: 4px solid #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        
-        .profile-left .likes {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            background: rgba(0,0,0,0.3);
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .profile-left .action-buttons a {
-            display: block;
-            background-color: #005a9c; /* 蓝色背景 */
-            color: #fff;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-bottom: 10px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        
-        .profile-left .action-buttons a:hover {
-            background-color: #0077cc;
-        }
-
-        .profile-left .action-buttons a i {
+        h2 i {
             margin-right: 10px;
         }
 
-        /* --- 卡片右侧：详细信息 --- */
-        .profile-right {
-            flex-grow: 1; /* 占据剩余空间 */
-            position: relative;
-            padding: 20px;
+        /* --- 顶部导航栏 --- */
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-
-        .info-box {
-            background-color: rgba(10, 20, 30, 0.5);
-            /* 使用 clip-path 创建左侧的斜切效果 */
-            clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
-            padding: 40px 40px 40px 60px;
-            height: 100%;
-            box-sizing: border-box;
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
         }
-
-        .info-tab {
-            position: absolute;
-            top: 40px;
-            left: -1px;
-            background-color: #c00;
-            color: #fff;
-            padding: 8px 25px 8px 20px;
+        nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            display: block;
             font-size: 16px;
-            font-weight: bold;
-            clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
-        .info-box h1 {
-            margin-top: 0;
-            font-size: 28px;
-            font-weight: bold;
+        /* --- 个人信息头部 --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #ffffff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            border: none;
         }
         
-        .info-box .details-list {
+        /* --- 内容区块 --- */
+        section {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        /* 个人信息详情 */
+        .profile-details {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        .profile-details img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #e9ecef;
+            object-fit: cover;
+        }
+        .profile-details ul {
             list-style: none;
             padding: 0;
-            margin: 0;
-            line-height: 2.2;
-            font-size: 16px;
         }
         
-        .info-box .details-list span {
-            color: #aaa;
-            display: inline-block;
-            width: 80px;
+        /* 新闻列表 */
+        .news-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news-list li {
+            margin-bottom: 15px;
+            border-left: 3px solid #0056b3;
+            padding-left: 15px;
+        }
+        .news-list .date {
+            font-weight: bold;
+            color: #003366;
+            display: block;
+        }
+
+        /* 研究方向 */
+        .research-item {
+            margin-bottom: 20px;
+        }
+
+        /* 招生信息 */
+        .recruitment {
+            background-color: #e7f3ff;
+            border: 1px solid #b3d7ff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* 团队成员 */
+        .team-members p {
+            column-count: 3;
+            column-gap: 20px;
+        }
+        
+        /* --- 页脚 --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #6c757d;
         }
         
         /* --- 响应式设计 --- */
-        @media (max-width: 800px) {
-            .profile-card {
-                flex-direction: column; /* 垂直堆叠 */
+        @media (max-width: 768px) {
+            .profile-details {
+                flex-direction: column;
+                text-align: center;
             }
-            .profile-left {
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            .team-members p {
+                column-count: 2;
             }
-            .info-box {
-                clip-path: none; /* 在小屏幕上移除斜切效果 */
-                padding: 40px 20px 20px;
-            }
-            .info-tab {
-                left: 20px; /* 调整标签位置 */
-            }
-            .top-nav {
-                justify-content: flex-start;
-                overflow-x: auto; /* 允许菜单横向滚动 */
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <nav class="top-nav">
+    <nav>
         <ul>
-            <li><a href="#home" class="active">首页</a></li>
-            <li><a href="#research">研究领域</a></li>
-            <li><a href="#courses">开授课程</a></li>
-            <li><a href="#projects">科研项目</a></li>
-            <li><a href="#publications">论文</a></li>
-            <li><a href="#awards">荣誉及奖励</a></li>
-            <li><a href="#admissions">招生信息</a></li>
-            <li><a href="#students">学生信息</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="research.html">研究领域</a></li>
+            <li><a href="news.html">最新动态</a></li>
+            <li><a href="publications.html">论文</a></li>
+            <li><a href="awards.html">荣誉及奖励</a></li>
+            <li><a href="recruitment.html">招生信息</a></li>
+            <li><a href="students.html">学生信息</a></li>
         </ul>
     </nav>
 
-    <main class="main-container">
-        
-        <div class="profile-card">
+    <div class="container">
+        <header id="home">
+            <h1>王向荣 教授</h1>
+            <p>博士生导师 | 硕士生导师</p>
+        </header>
 
-            <div class="profile-left">
-                <img src="~/images/wangxiangrong.jpg" alt="王向荣教授头像" class="avatar">
-                
-                <div class="likes">
-                    <i class="fa-solid fa-heart" style="color: #ff6b6b;"></i>
-                    <span>+ 113</span>
-                </div>
-
-                <div class="action-buttons">
-                    <a href="#"><i class="fa-solid fa-user-tie"></i> 同专业博导</a>
-                    <a href="#"><i class="fa-solid fa-lightbulb"></i> 同专业硕导</a>
-                </div>
-            </div>
-
-            <div class="profile-right">
-                <div class="info-box">
-                    <div class="info-tab">个人信息</div>
-                    <h1>王向荣 <span style="font-size: 22px; font-weight: normal;">教授</span></h1>
-                    <ul class="details-list">
-                        <li><span></span>教授 博士生导师 硕士生导师</li>
-                        <li><span>电子邮箱：</span>xrwang@buaa.edu.cn</li>
-                        <li><span>所在单位：</span>电子信息工程学院</li>
-                        <li><span>职务：</span>Professor</li>
-                        <li><span>学历：</span>博士研究生</li>
-                        <li><span>办公地点：</span>新主楼F622</li>
-                        <li><span>在职信息：</span>在职</li>
+        <main>
+            <section id="profile">
+                <div class="profile-details">
+                    <img src="images/wangxiangrong.jpg" alt="王向荣教授头像">
+                    <ul>
+                        <li><i class="fa fa-envelope"></i> <strong>电子邮箱：</strong>xrwang@buaa.edu.cn</li>
+                        <li><i class="fa fa-building"></i> <strong>所在单位：</strong>电子信息工程学院</li>
+                        <li><i class="fa fa-map-marker-alt"></i> <strong>办公地点：</strong>新主楼F622</li>
+                        <li><i class="fa fa-graduation-cap"></i> <strong>学历：</strong>博士研究生</li>
                     </ul>
                 </div>
-            </div>
+            </section>
+            
+            <section id="biography">
+                <h2><i class="fa fa-user"></i>个人简介</h2>
+                <p>王向荣，博士、教师，2009年和2011年分别获南京理工大学电子信息工程系学士和硕士学位，2015年获澳大利亚新南威尔士大学电子工程系工学博士学位，2016年在美国维拉诺瓦大学高级通信研究中心从事博士后工作，2016年10月至今在北京航空航天大学任教。近年来已发表论文百余篇，主持国家自然科学基金民航联合重点项目，科技部重点研发计划课题，国家自然科学青年基金项目，国家自然科学基金面上项目，主持工信部无线电频谱监测项目，主持北京市自然科学基金项目和新星交叉项目，核心人员参与国家自然科学基金重大科研仪器研制项目。IEEE高级会员。2016年入选第二届中国科协“青年人才托举工程”，2018年入选北航拔尖人才计划,2022年北京市科技新星，2022年度国家级人才计划青年项目，2022年度欧盟“地平线”杰出人才计划玛丽居里学者，获2023年度IEEE 航空电子系统协会（AESS）Barry Carlton Award，IEEE 航空电子系统协会 Digtinguished Lecturer(2025-2026)。</p>
+            </section>
 
-        </div>
+            <section id="recruitment" class="recruitment">
+                <h2><i class="fa fa-bullhorn"></i>招生信息</h2>
+                <p>有意申请本课题组硕士、博士的同学请直接发邮件至 xrwang@buaa.edu.cn。</p>
+            </section>
 
-    </main>
+            <section id="education">
+                <h2><i class="fa fa-graduation-cap"></i>教育经历</h2>
+                <ul>
+                    <li><strong>2011.7 - 2015.7:</strong> University of New South Wales | 信息与通信工程 | 博士学位</li>
+                    <li><strong>2009.7 - 2011.7:</strong> 南京理工大学 | 信息与通信工程 | 硕士学位</li>
+                    <li><strong>2005.9 - 2009.7:</strong> 南京理工大学 | 信息与通信工程 | 学士学位</li>
+                </ul>
+            </section>
 
+            <section id="experience">
+                <h2><i class="fa fa-briefcase"></i>工作经历</h2>
+                <ul>
+                    <li><strong>2016.10 - 至今:</strong> 北京航空航天大学 | 电子信息工程学院 | 教师</li>
+                    <li><strong>2016.2 - 2016.8:</strong> 美国维拉诺瓦大学 | 博士后</li>
+                    <li><strong>2015.10 - 2015.12:</strong> 澳大利亚新南威尔士大学 | 博士后</li>
+                </ul>
+            </section>
+
+            <section id="services">
+                <h2><i class="fa fa-users"></i>社会兼职</h2>
+                <ul>
+                    <li>Committee Member of IEEE SAM TC</li>
+                    <li>Member of IEEE Signal Processing Education Center Editorial Board</li>
+                    <li>Associate Editor of IEEE Transactions on Radar Systems</li>
+                    <li>Associate Editor of Elsevier Digital Signal Processing</li>
+                </ul>
+            </section>
+            
+			<section id="team-members-section">
+                <h2><i class="fa fa-users-cog"></i>团队成员 (Team Members)</h2>
+                <p><b>团队名称：空管信号处理团队。</b>团队采用个性化培养风格，针对每位同学的特点和优点，制定培养方案，让每位同学成长为最好的自己。</p>
+
+                <h3>博士研究生：</h3>
+                <div class="member-group">
+                    修苌, 程硕, 唐妮娜, 翟唯童, Shahid Hassan, Saima Ishtiaq
+                </div>
+
+                <h3>硕士研究生：</h3>
+                <div class="member-group">
+                    张恒毅, 于硕同, 张昌盛, 刘恒峰, 吴啸宇, 吴焜, 黄嘉怡, 李畅, 张鑫, 龙倩, 王鹏程
+                </div>
+
+                <h3>已毕业学生 (Alumni)：</h3>
+                <div class="member-group">
+                    张旋, 徐菁, 马雅楠
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>版权所有 © 2014-2025 北京航空航天大学</p>
+            <p>地址：北京市海淀区学院路37号 | 邮编：100191 | 电话：82317114</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究领域 - 王向荣 教授</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- 全局样式 (与主页保持一致) --- */
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
+            color: #003366;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        h2 i, h3 i {
+            margin-right: 10px;
+        }
+
+        /* --- 顶部导航栏 (与主页保持一致) --- */
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* --- 内容区块 (与主页保持一致) --- */
+        section {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* --- 研究方向特定样式 --- */
+        .research-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .research-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .research-item h3 {
+            border-bottom: none;
+            font-size: 1.5em;
+        }
+        .research-item p {
+            text-align: justify;
+        }
+
+        /* --- 页脚 (与主页保持一致) --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="research.html">研究领域</a></li>
+            <li><a href="news.html">最新动态</a></li>
+            <li><a href="publications.html">论文</a></li>
+            <li><a href="awards.html">荣誉及奖励</a></li>
+            <li><a href="recruitment.html">招生信息</a></li>
+            <li><a href="students.html">学生信息</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="research-details">
+                <h2><i class="fa fa-flask"></i>研究领域 (Research Areas)</h2>
+
+                <div class="research-item">
+                    <h3><i class="fa fa-wifi"></i>研究方向一：通感一体化（ISAC）</h3>
+                    <p>
+                        通感一体化（Integrated Sensing and Communication, ISAC）通过共享频谱、硬件和算法资源，实现通信与感知功能的深度融合。其核心目标是在同一套系统中同时完成信息传输和环境感知，为自动驾驶、智慧城市以及工业物联网、6G通信等领域提供核心支撑，通过“一网多能”设计，为低空经济提供安全、高效、低成本的技术底座。随着政策支持（如2024年低空经济写入政府工作报告）和技术突破（如5G-A通感基站商用），两者协同将推动无人机物流、智慧城市等场景规模化落地，成为数字经济的新引擎。
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3><i class="fa fa-project-diagram"></i>研究方向二：阵列信号处理（Array Signal Processing）</h3>
+                    <p>
+                        阵列信号处理的研究方向聚焦于如何通过多传感器阵列的空间采样与信号协同处理，实现复杂环境下的信号增强、干扰抑制与目标精准定位。其核心方向包括：波束形成技术、空间谱估计与DOA（波达方向）估计、空时自适应处理（STAP）等。这些技术广泛应用于雷达探测、5G通信、声呐定位、医学成像等领域。
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3><i class="fa fa-satellite-dish"></i>研究方向三：雷达目标跟踪与识别（Radar Signal Processing）</h3>
+                    <p>
+                        雷达目标识别研究方向聚焦于通过雷达回波信号分析目标的物理特性与运动状态，实现复杂环境下目标的精准分类与鉴别。其核心方向包括：微动特征提取（捕捉目标局部振动/转动引起的回波调制，用于区分无人机、手势等运动目标）、多模态信息融合、深度学习驱动（利用CNN、LSTM等网络自动学习时频域特征，突破传统算法对先验知识的依赖）。典型应用涵盖非接触人机界面、人体步态识别、收拾识别、空中写字等。
+                    </p>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>版权所有 © 2014-2025 北京航空航天大学</p>
+            <p>地址：北京市海淀区学院路37号 | 邮编：100191 | 电话：82317114</p>
+        </footer>
+    </div>
+</body>
+</html>

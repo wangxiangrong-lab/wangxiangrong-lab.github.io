@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息 - 王向荣 教授</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- 全局样式 (与主页保持一致) --- */
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, h3 {
+            color: #003366;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        h2 i {
+            margin-right: 10px;
+        }
+
+        /* --- 顶部导航栏 (与主页保持一致) --- */
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+        /* --- 内容区块 (与主页保持一致) --- */
+        section {
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* --- 学生卡片网格布局 --- */
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .student-card {
+            background-color: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .student-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+            margin-bottom: 15px;
+        }
+        .student-card .name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #003366;
+        }
+        .student-card .level {
+            font-size: 1em;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .student-card .interest {
+            font-size: 0.9em;
+            color: #555;
+            min-height: 50px; /* 保持卡片高度基本一致 */
+        }
+        .student-card .email a {
+            color: #0056b3;
+            font-size: 0.9em;
+        }
+        .student-card .email i {
+            margin-right: 5px;
+        }
+
+        /* --- 页脚 (与主页保持一致) --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="research.html">研究领域</a></li>
+            <li><a href="news.html">最新动态</a></li>
+            <li><a href="publications.html">论文</a></li>
+            <li><a href="awards.html">荣誉及奖励</a></li>
+            <li><a href="recruitment.html">招生信息</a></li>
+            <li><a href="students.html">学生信息</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section id="students-info">
+                <h2><i class="fa fa-users"></i>团队成员 (Team Members)</h2>
+                <p>团队汇聚了一批对信号处理和无线通信领域充满热情的优秀硕博士研究生。我们倡导开放、协作的科研氛围，鼓励创新与探索。</p>
+
+                <div class="students-grid">
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="修苌">
+                        <div class="name">修苌</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">研究方向：阵列信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="程硕">
+                        <div class="name">程硕</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">研究方向：通感一体化</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="唐妮娜">
+                        <div class="name">唐妮娜</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">研究方向：雷达信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="张恒毅">
+                        <div class="name">张恒毅</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：通感一体化</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="于硕同">
+                        <div class="name">于硕同</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：阵列信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="张昌盛">
+                        <div class="name">张昌盛</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：雷达目标识别</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="刘恒峰">
+                        <div class="name">刘恒峰</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：通感一体化</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="吴啸宇">
+                        <div class="name">吴啸宇</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：阵列信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="吴焜">
+                        <div class="name">吴焜</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：雷达信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="黄嘉怡">
+                        <div class="name">黄嘉怡</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：通感一体化</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="翟唯童">
+                        <div class="name">翟唯童</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">研究方向：智能反射面</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="李畅">
+                        <div class="name">李畅</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：分布式雷达</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="张鑫">
+                        <div class="name">张鑫</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：阵列信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="龙倩">
+                        <div class="name">龙倩</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：通感一体化</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+                    
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="王鹏程">
+                        <div class="name">王鹏程</div>
+                        <div class="level">硕士研究生</div>
+                        <div class="interest">研究方向：雷达信号处理</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> 联系邮箱</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="Shahid Hassan">
+                        <div class="name">Shahid Hassan</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">Research: ISAC</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> Contact Email</a></div>
+                    </div>
+
+                    <div class="student-card">
+                        <img src="images/student.jpg" alt="Saima Ishtiaq">
+                        <div class="name">Saima Ishtiaq</div>
+                        <div class="level">博士研究生</div>
+                        <div class="interest">Research: Array Signal Processing</div>
+                        <div class="email"><a href="mailto:email@buaa.edu.cn"><i class="fa fa-envelope"></i> Contact Email</a></div>
+                    </div>
+                    
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>版权所有 © 2014-2025 北京航空航天大学</p>
+            <p>地址：北京市海淀区学院路37号 | 邮编：100191 | 电话：82317114</p>
+        </footer>
+    </div>
+</body>
+</html>
