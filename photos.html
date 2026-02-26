@@ -1,1 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>照片墙 - 王向荣团队</title>
+  <link rel="stylesheet" href="assets/css/photos.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <a href="index.html">首页</a>
+      <a href="research.html">研究领域</a>
+      <a href="news.html">最新动态</a>
+      <a href="photos.html" class="active">照片墙</a>
+    </nav>
+  </header>
 
+  <main class="gallery-page">
+    <h1>照片墙</h1>
+    <p>把你想展示的照片放到 <code>images/photos/</code> 目录下，页面会自动显示（示例图片名：photo1.jpg, photo2.jpg...）。</p>
+
+    <div id="gallery" class="gallery-grid">
+      <!-- 示例图片，替换或新增 images/photos 目录下的文件 -->
+      <a href="images/photos/photo1.jpg" class="gallery-item"><img src="images/photos/photo1.jpg" alt="photo1"></a>
+      <a href="images/photos/photo2.jpg" class="gallery-item"><img src="images/photos/photo2.jpg" alt="photo2"></a>
+      <a href="images/photos/photo3.jpg" class="gallery-item"><img src="images/photos/photo3.jpg" alt="photo3"></a>
+    </div>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button id="lb-close" class="lb-close" aria-label="关闭">×</button>
+      <img id="lb-img" src="" alt="">
+    </div>
+  </main>
+
+  <script src="assets/js/photos.js"></script>
+</body>
+</html>
