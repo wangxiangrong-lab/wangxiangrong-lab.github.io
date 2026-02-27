@@ -24,6 +24,13 @@
     <h1>照片墙</h1>
     <p>把你想展示的照片放到 <code>images/photos/</code> 目录下，页面会自动显示（示例图片名：photo1.jpg, photo2.jpg...）。</p>
 
+     <div class="gallery-controls" style="margin:12px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <label for="thumb-size">缩略图高度：</label>
+      <input id="thumb-size" type="range" min="80" max="400" value="160">
+      <span id="thumb-size-value">160px</span>
+      <button id="thumb-reset" style="margin-left:8px">重置</button>
+    </div>
+
     <div id="gallery" class="gallery-grid">
       <!-- 示例图片，替换或新增 images/photos 目录下的文件 -->
       <a href="images/毕业照202601.jpg" class="gallery-item"><img src="images/毕业照202601.jpg" alt="毕业照202601"></a>
