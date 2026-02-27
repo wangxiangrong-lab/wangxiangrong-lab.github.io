@@ -22,7 +22,6 @@
 
   <main class="gallery-page">
     <h1>照片墙</h1>
-    <p>把你想展示的照片放到 <code>images/photos/</code> 目录下，页面会自动显示（示例图片名：photo1.jpg, photo2.jpg...）。</p>
 
      <div class="gallery-controls" style="margin:12px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
       <label for="thumb-size">缩略图高度：</label>
@@ -31,10 +30,10 @@
       <button id="thumb-reset" style="margin-left:8px">重置</button>
     </div>
 
-    <div id="gallery" class="gallery-grid">
-      <!-- 示例图片，替换或新增 images/photos 目录下的文件 -->
-       <a href="images/毕业照202601.jpg" class="gallery-item fixed-size-5cm"> <img src="images/毕业照202601.jpg" alt="毕业照 2026-01" style="width:5cm;height:5cm;object-fit:cover;display:block;"> </a>
-    </div>
+      <a href="images/毕业照202601.jpg" class="gallery-item fixed-size-3cm">
+        <img src="images/毕业照202601.jpg" alt="毕业照 2026-01" style="width:5cm;height:5cm;object-fit:cover;display:block;">
+        <div class="photo-caption">恭喜团队毕业一名博士和一名硕士</div>
+      </a>
 
     <div id="lightbox" class="lightbox" aria-hidden="true">
       <button id="lb-close" class="lb-close" aria-label="关闭">×</button>
